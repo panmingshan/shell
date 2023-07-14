@@ -7,10 +7,14 @@ if ! type node >/dev/nul 2>&1; then
 node_env=false;
 fi;
 
-if $node_env;then
-mkdir -p ~/software
 
-wget -o ~/software/node.tar https://npmmirror.com/mirrors/node/v18.16.1/node-v18.16.1-linux-x64.tar.xz
+#安装nodejs
+if $node_env;then
+mkdir -p $savePath
+
+wget -o "$(savePath)/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-v18.16.1-linux-x64.tar.xz
 cd $savePath
-tar -xvf 
-fi 
+tar -xvf "$(savePath)/node.tar" -C 'nodejs'
+cd ./nodejs/bin
+export "$(pwd);$PATH"
+fi
