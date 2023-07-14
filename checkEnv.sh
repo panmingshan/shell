@@ -1,6 +1,6 @@
 #! /bin/sh
 # 下载目录
-savePath='~/software'
+savePath=~/software
 # 判断是否安装nodejs
 node_env=true;
 if ! type node >/dev/nul 2>&1; then
@@ -12,9 +12,9 @@ fi;
 if $node_env;then
 mkdir -p $savePath
 
-wget -o "$(savePath)/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-v18.16.1-linux-x64.tar.xz
+wget -O "${savePath}/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-v18.16.1-linux-x64.tar.xz
 cd $savePath
-tar -xvf "$(savePath)/node.tar" -C 'nodejs'
+tar -xvf "${savePath}/node.tar" -C 'nodejs'
 cd ./nodejs/bin
 export "$(pwd);$PATH"
 fi
