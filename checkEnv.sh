@@ -16,6 +16,6 @@ wget -O "${savePath}/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-
 cd $savePath
 mkdir nodejs
 tar -xvf "${savePath}/node.tar" -C 'nodejs'
-cd $savePath/nodejs/$(ls)/bin
+cd $savePath/nodejs/$(ls | grep node)/bin
 export "$(pwd);$PATH"
 fi
