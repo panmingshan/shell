@@ -31,7 +31,7 @@ fi;
 # 下载redis
 # 判断是否安装
 redis_env=true;
-if ! type mysql-cli >/dev/nul 2>&1; then
+if ! type redis-cli >/dev/nul 2>&1; then
 redis_env=false;
 fi;
 
