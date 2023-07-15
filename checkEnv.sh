@@ -74,7 +74,7 @@ mv $mysqlPath 'mysqlD';
 cd ./mysqlD/bin/
 ln -s ./mysql /usr/local/bin/mysqlD;
 else
-echo "node已安装，version:$(mysql -V)"
+echo "mysql已安装，version:$(mysql -V)"
 fi;
 
 # -----------------------------------------
