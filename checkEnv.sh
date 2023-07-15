@@ -15,8 +15,8 @@ wget -O "${savePath}/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-
 cd $savePath
 tar -xvf ./node.tar
 nodePath=$(ls | grep node-v)
+rm  -rf nodejs
 mv $nodePath 'nodejs';
-echo ~~~~~~
-ll ./nodejs
-export PATH="$PATH:$(pwd)";
+cd ./nodejs/bin/
+ln -s ./node /usr/local/bin/node
 fi;
