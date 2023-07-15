@@ -9,7 +9,7 @@ fi;
 
 
 #安装nodejs
-if $node_env;then
+if ! $node_env;then
 mkdir -p $savePath
 wget -O "${savePath}/node.tar" https://npmmirror.com/mirrors/node/v18.16.1/node-v18.16.1-linux-x64.tar.xz
 cd $savePath
@@ -18,5 +18,7 @@ nodePath=$(ls | grep node-v)
 rm  -rf nodejs
 mv $nodePath 'nodejs';
 cd ./nodejs/bin/
-ln -s ./node /usr/local/bin/node
+ln -s ./node /usr/local/bin/node;
+else
+echo "node已安装，version:$(node -v)“
 fi;
