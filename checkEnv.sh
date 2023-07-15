@@ -20,5 +20,5 @@ mv $nodePath 'nodejs';
 cd ./nodejs/bin/
 ln -s ./node /usr/local/bin/node;
 else
-echo "node已安装，version:$(node -v)“
+echo "node已安装，version:$(node -v)"
 fi;
