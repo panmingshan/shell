@@ -100,5 +100,5 @@ cd ./nginxD
 make
 make install
 else
-echo "nginx已安装，version:$(nginx -v)"
+echo "nginx已安装，version:$(nginx -v 2>&1)"
 fi;
